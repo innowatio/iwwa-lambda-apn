@@ -2,12 +2,11 @@ import BPromise from "bluebird";
 import router from "kinesis-router";
 import {partial} from "ramda";
 
-import {apnPush, getUserToken} from "./pipeline-steps";
+import {apnPush, getUserApnToken} from "./pipeline-steps";
 
-function pushPipeline (event) {
-    const {message, userId} = event.data;
+function pushPipeline ({data: {message, userId}}) {
     return BPromise.resolve()
-        .then(partial(getUserToken, userId))
+        .then(partial(getUserApnToken, userId))
         .then(partial(apnPush, message));
 }
 
