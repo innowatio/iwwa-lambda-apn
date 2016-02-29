@@ -9,37 +9,25 @@
   },
   "dependencies": {
     "apn": "^1.7.5",
-    "bluebird": "^2.10.2",
-    "dotenv": "^1.2.0",
+    "bluebird": "^3.3.3",
+    "dotenv": "^2.0.0",
     "kinesis-router": "^1.2.1",
-    "mongodb": "^2.0.45",
-    "ramda": "^0.17.1"
+    "lodash.get": "^4.1.2",
+    "mongodb": "^2.1.7"
   },
   "devDependencies": {
-    "babel": "^5.6.23",
-    "babel-core": "^5.7.4",
-    "babel-plugin-rewire": "^0.1.7",
-    "chai": "^3.1.0",
-    "chai-as-promised": "^5.1.0",
-    "coveralls": "^2.11.2",
-    "eslint": "^1.0.0",
-    "gulp": "^3.9.0",
-    "gulp-babel": "^5.1.0",
-    "gulp-eslint": "^1.0.0",
-    "gulp-spawn-mocha": "^2.2.1",
-    "gulp-zip": "^3.0.2",
-    "istanbul": "^0.3.17",
-    "lambda-deploy": "^2.1.0",
-    "mocha": "^2.2.5",
-    "sinon": "^1.15.4",
-    "sinon-chai": "^2.8.0"
+    "babel": "^5.8.29",
+    "babel-core": "^5.8.29",
+    "babel-eslint": "^4.1.4",
+    "babel-plugin-rewire": "^0.1.22",
+    "eslint": "^1.9.0",
+    "gulp": "^3.9.1",
+    "lambda-deploy": "^2.1.0"
   },
   "scripts": {
-    "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "test": "gulp test",
-    "lint": "gulp lint",
     "deploy": "gulp deploy",
-    "dev": "gulp"
+    "lint": "eslint src test",
+    "test": "NODE_PATH=src babel-node test/e2e.js"
   },
   "author": "Team Wattellina <wattellina@mondora.com>",
   "license": "Apache-2.0"

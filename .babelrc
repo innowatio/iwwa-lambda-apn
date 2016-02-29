@@ -1,7 +1,3 @@
 {
-    "env": {
-        "test": {
-            "plugins": ["rewire"]
-        }
-    }
+    "stage": "0"
 }
