@@ -1,3 +1,4 @@
+import "babel/polyfill";
 import {map} from "bluebird";
 import router from "kinesis-router";
 import get from "lodash.get";
