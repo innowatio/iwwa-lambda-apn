@@ -1,13 +1,15 @@
 import {Connection, Device, Notification} from "apn";
 import {delay} from "bluebird";
 
-import * as config from "../config";
+import {APN_CERTIFICATE, APN_KEY, TRANSMISSION_WAIT_TIME} from "../config";
+import log from "./logger";
 
-const cert = new Buffer(config.APN_CERTIFICATE, "base64");
-const key = new Buffer(config.APN_KEY, "base64");
+const cert = new Buffer(APN_CERTIFICATE, "base64");
+const key = new Buffer(APN_KEY, "base64");
 const connection = new Connection({cert, key});
 
 export function push (message, apnToken) {
+    log.info(`Sending notification to device with token ${apnToken}`);
     const device = new Device(apnToken);
     const notification = new Notification();
     notification.badge = 1;
@@ -23,5 +25,5 @@ export function push (message, apnToken) {
     *   has actually been successfully delievered. We just assume so and hope
     *   for the best.
     */
-    return delay(config.TRANSMISSION_WAIT_TIME);
+    return delay(TRANSMISSION_WAIT_TIME);
 }

@@ -8,10 +8,11 @@
     "url": "https://github.com/innowation/iwwa-lambda-apn.git"
   },
   "dependencies": {
+    "apn": "^1.7.5",
     "babel": "^5.8.29",
     "babel-core": "^5.8.29",
-    "apn": "^1.7.5",
     "bluebird": "^3.3.3",
+    "bunyan": "^1.7.1",
     "dotenv": "^2.0.0",
     "kinesis-router": "^1.2.1",
     "lodash.get": "^4.1.2",
