@@ -7,6 +7,12 @@ import log from "./logger";
 const cert = new Buffer(APN_CERTIFICATE, "base64");
 const key = new Buffer(APN_KEY, "base64");
 const connection = new Connection({cert, key});
+connection.on("transmissionError", (errorCode, notification, device) => {
+    log.error(
+        `Error transmitting notification to device with token ${device}`,
+        {errorCode}
+    );
+});
 
 export function push (message, apnToken) {
     log.info(`Sending notification to device with token ${apnToken}`);
