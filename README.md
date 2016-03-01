@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/innowatio/iwwa-lambda-apn.svg?branch=master)](https://travis-ci.org/innowatio/iwwa-lambda-apn)
-[![Coverage Status](https://coveralls.io/repos/innowatio/iwwa-lambda-apn/badge.svg?branch=master&service=github)](https://coveralls.io/github/innowatio/iwwa-lambda-apn?branch=master)
 [![Dependency Status](https://david-dm.org/innowatio/iwwa-lambda-apn.svg)](https://david-dm.org/innowatio/iwwa-lambda-apn)
 [![devDependency Status](https://david-dm.org/innowatio/iwwa-lambda-apn/dev-status.svg)](https://david-dm.org/innowatio/iwwa-lambda-apn#info=devDependencies)
 
