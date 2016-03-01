@@ -7,6 +7,9 @@ export const APN_KEY = process.env.APN_KEY;
 export const MONGODB_URL = (
     process.env.MONGODB_URL || "mongodb://localhost:27017/test"
 );
+export const APN_PRODUCTION = (
+    (process.env.APN_PRODUCTION === "true") || false
+);
 export const TRANSMISSION_WAIT_TIME = (
     parseInt(process.env.TRANSMISSION_WAIT_TIME) || 2000
 );
